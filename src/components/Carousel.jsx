@@ -17,9 +17,9 @@ const Carousel = () => {
   const [slide, setSlide] = useState(0);
   const length = sliderData.length;
 
-  useEffect(() => {
-    console.log(sliderData[slide]);
-  }, [slide]);
+  // useEffect(() => {
+  //   console.log(sliderData[slide]);
+  // }, [slide]);
 
   const prevSlide = () => {
     setSlide(slide === length - 1 ? 0 : slide + 1);
@@ -40,7 +40,7 @@ const Carousel = () => {
       />
       <div>
         <img
-          className="w-full rounded-md"
+          className="w-full rounded-md carousel-slide"
           src={sliderData[slide].url}
           alt="carousel"
         />
